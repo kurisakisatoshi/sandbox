@@ -4,6 +4,7 @@ import { HTTP_PROVIDERS, Http, Request, Response } from 'angular2/http';
 import { Observable } from "rxjs/Observable";
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
+import { TimeoutError } from "rxjs/util/TimeoutError";
 
 @Component({
   selector: "my-app",
