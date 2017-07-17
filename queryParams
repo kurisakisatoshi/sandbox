@@ -1,0 +1,21 @@
+
+let link = ['/detail', hero.id];
+this.router.navigate(link, { queryParams: { a: 'aa', b: 'bb' } });
+
+
+<a *ngFor="let hero of heroes" [routerLink]="['/detail', hero.id]" [queryParams]="{ a: 'aa' + hero.id, b: 'bb' + hero.id }"
+  class="col-1-4">
+  <div class="module hero">
+    <h4>{{hero.name}}</h4>
+  </div>
+</a>
+
+
+
+this.route.queryParams.subscribe(p => {
+  console.log("queryParams[a]" + p['a']);
+  console.log("queryParams[b]" + p['b']);
+});
+
+
+
